@@ -1,27 +1,37 @@
-// Custom styles
 .education {
-    margin-top: 2rem;
-  
-    .education-item {
-      margin-bottom: 2rem;
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      gap: 2rem;
-      align-items: start;
-  
-      img {
-        justify-self: center;
-        align-self: start;
-        max-width: 200px;
-        width: 100%;
-      }
+  margin-top: 2rem;
+
+  .education-item {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    align-items: start;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;  // Change to single column
+      justify-items: center;       // Center items in the column
+      text-align: center;         // Center text
+      gap: 1rem;                  // Reduce gap for mobile
     }
-  
-    .education-details {
-      padding-left: 1rem;
-      
-      p {
-        margin: 0.5rem 0;
-      }
+
+    img {
+      justify-self: center;
+      align-self: start;
+      max-width: 200px;
+      width: 100%;
     }
   }
+
+  .education-details {
+    padding-left: 1rem;
+    
+    @media screen and (max-width: 768px) {
+      padding-left: 0;           // Remove padding on mobile
+    }
+    
+    p {
+      margin: 0.5rem 0;
+    }
+  }
+}
