@@ -48,18 +48,10 @@ layout: default
       {% include news.liquid limit=true %}
     {% endif %}
 
-    <!-- Latest posts -->
-    {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">research</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
@@ -77,4 +69,30 @@ layout: default
       {% include scripts/newsletter.liquid center=true %}
     {% endif %}
   </article>
+
+  <!-- Education Section -->
+  <h2>
+    education
+  </h2>
+  <div class="education">
+    <div class="education-item">
+      <img src="{{ '/assets/img/UC-Berkeley-Symbol.png' | relative_url }}" width="200" style="vertical-align: middle;">
+      <div class="education-details">
+        <p>Department of Electrical Engineering and Computer Science</p>
+        <p>Master of Engineering (MEng): Electrical Engineering and Computer Science</p>
+        <p>GPA: 3.975/4, Major GPA: 4/4</p>
+        <p>August 2023 – May 2024</p>
+      </div>
+    </div>
+
+    <div class="education-item">
+      <img src="{{ '/assets/img/UofT_Logo.png' | relative_url }}" width="200" style="vertical-align: middle;">
+      <div class="education-details">
+        <p>Department of Computer Science | Trinity College</p>
+        <p>Honours Bachelor of Science (HBSc) With High Distinction: Specialist in Computer Science</p>
+        <p>GPA: 3.94/4, Major GPA: 3.98/4</p>
+        <p>September 2019 – June 2022 (Finished the four-year Honours program in three years)</p>
+      </div>
+    </div>
+  </div>
 </div>
