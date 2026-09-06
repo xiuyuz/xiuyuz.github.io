@@ -1,33 +1,112 @@
----
----
-
-@article {ocf,
-preview={ocf.png},
-abbr={Preprint},
-	author = {Fernandes Matuck, Bruno and Huynh, Khoa and Pereira, Diana and Zhang, XiuYu and Kunz, Meik and Kumar, Nikhil and Easter, Quinn T. and Fernandes, Alexandre and Ghodke, Ameer and Predeus, Alex and Szabo, Lilli and Harnischfeger, Nadja and Khavandgar, Zohreh and Beach, Margaret and Perez, Paola and Nilges, Benedikt and Moreno, Maria and Ko, Kang and Teichmann, Sarah and Kimple, Adam and Pringle, Sarah and kretzschmar, Kai and Warner, Blake  M and Sequeira, Ines and Liu, Jinze and Byrd, Kevin M},
-	title = {The Immunoregulatory Architecture of the Adult Oral Cavity},
-	year = {2024},
-	doi = {10.1101/2024.12.01.626279},
-	abstract = {The oral cavity is a critical barrier with immunosurveillance capabilities. A detailed understanding of its cellular, molecular, and spatial architecture is essential for advancing precision medicine across aerodigestive tissues. Here, we present the first integrated atlas of human adult oral and craniofacial tissues, derived from single-cell RNA sequencing of ~250,000 cells from 70 samples across 13 niches, including salivary glands and oral mucosae. Complementary spatial atlases using a 40-plex protein and 300-plex transcriptomics panels were developed, covering \&gt;2 million cells. Using our new AstroSuite package, we identified 8 tissue cellular neighborhoods (TCNs) and 17 multicellular interaction modules (MCIMs) across gland and mucosae in health. Diverse fibrovascular TCNs emerged as centralized hubs, coordinating immune cell migration and activation. Mucosal hubs within stroma displayed higher immune cell density, diversity, and activation than glands, underscoring differences in functional architecture. In keratinized and nonkeratinized mucosae, common fibrovascular hubs, and MCIMs revealed a specialized biogeography of immunoregulation. Under chronic inflammation, mucosal TCNs were fragmented, and MCIMs involving fibroblasts and immune cells were reorganized and expanded. Focused analysis of tertiary lymphoid structures (TLS) and fibroblasts identified TLS-associated MCIMs and drug candidates targeting these spatial interactions, offering a foundational framework for broadly dissecting mucosal immunity to guide precision medicine approaches.Competing Interest StatementThe authors have declared no competing interest.},
-	html = {https://www.biorxiv.org/content/early/2024/12/02/2024.12.01.626279},
-	journal = {Preprint, under review at Cell},
+% Verified source: https://arxiv.org/abs/2608.25697
+@article{lmsm,
+  preview={lmsm-figure1.svg},
+  abbr={Preprint},
+  title={LMSM: LLM Security Framework Inspired by Linux Security Modules},
+  author={Zhang, XiuYu and Ruan, Bonan and Fang, Junfeng and Zhang, An and Chua, Tat-Seng and Liang, Zhenkai},
+  journal={arXiv preprint},
+  year={2026},
+  arxiv={2608.25697},
+  doi={10.48550/arXiv.2608.25697},
+  pdf={https://arxiv.org/pdf/2608.25697},
+  abstract={Summary: LMSM brings a modular security architecture to language-model serving. It separates model-internal evidence, policy decisions, and permission to release generated output, allowing different monitoring methods to share the same enforcement infrastructure. Experiments with Transformers and vLLM show that this separation supports multiple policies and concurrent requests. On Qwen3-4B, the prototype substantially reduces successful harmful prompts while retaining most of the throughput of an unmonitored serving configuration.},
   selected={true},
 }
 
-@article{zhang2024advancing,
+% Verified source: https://arxiv.org/abs/2606.05122v2
+@inproceedings{see,
+  preview={see.png},
+  code={https://github.com/YiShan05/SEE_official},
+  abbr={EMNLP Findings},
+  title={Self-Evaluation Is Already There: Eliciting Latent Judge Calibration in Base LLMs with Minimal Data},
+  author={Zhang, XiuYu and Shan, Yi and Fang, Junfeng and Liang, Zhenkai},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year={2026},
+  arxiv={2606.05122},
+  doi={10.48550/arXiv.2606.05122},
+  pdf={https://arxiv.org/pdf/2606.05122},
+  annotation={Equal contribution: XiuYu Zhang and Yi Shan. Corresponding author: Junfeng Fang.},
+  abstract={Summary: This work studies whether language models can anticipate the quality scores assigned to their own answers by external model judges. Self-Evaluation Elicitation alternates reinforcement learning with masked distillation to improve this calibration using 160 examples. Experiments across three benchmarks find that base models already possess useful self-evaluation ability, and that the proposed training can expose it while maintaining response quality and transferring to judges outside the training setup.},
+  selected={true},
+}
+
+% Verified source: https://arxiv.org/abs/2606.05753
+@article{cosine_misleads,
+  preview={cosine_misleads-figure1.svg},
+  abbr={Preprint},
+  title={Cosine Misleads: Auxiliary Losses Reshape Vision Language Models, Not Their Latents},
+  author={Zhang, XiuYu and Fang, Junfeng and Liang, Zhenkai},
+  journal={arXiv preprint},
+  year={2026},
+  arxiv={2606.05753},
+  doi={10.48550/arXiv.2606.05753},
+  pdf={https://arxiv.org/pdf/2606.05753},
+  abstract={Summary: This study tests whether aligning supervised latent tokens with visual targets improves reasoning in vision-language models. Across five variants, stronger cosine alignment instead accompanies lower answer accuracy. PRISM combines linear probing with latent corruption to examine where answer information appears and whether generation depends on the latent tokens. The results suggest that auxiliary supervision primarily changes shared language-model parameters, while the supervised latents themselves contribute relatively little to the final answer.},
+  selected={true},
+}
+
+% Verified source: https://iclr.cc/virtual/2026/poster/10011731
+@inproceedings{alphaalign,
+abbr={ICLR},
+preview={alphaalign.png},
+  title={AlphaAlign: Incentivizing Safety Alignment with Extremely Simplified Reinforcement Learning},
+  author={Zhang, Yi and Zhang, An and Zhang, XiuYu and Sheng, Leheng and Chen, Yuxin and Liang, Zhenkai and Wang, Xiang},
+  year={2026},
+  abstract={Large language models (LLMs), despite possessing latent safety understanding from their vast pretraining data, remain vulnerable to generating harmful content and exhibit issues such as over-refusal and utility degradation after safety alignment. Current safety alignment methods often result in superficial refusal shortcuts or rely on intensive supervision for reasoning-based approaches, failing to fully leverage the model's intrinsic safety self-awareness. We propose AlphaAlign, a simple yet effective pure reinforcement learning (RL) framework with verifiable safety reward designed to incentivize this latent safety awareness through proactive safety reasoning. AlphaAlign employs a dual-reward system: a verifiable safety reward encourages correctly formatted and explicitly justified refusals for harmful queries while penalizing over-refusals, and a normalized helpfulness reward guides high-quality responses to benign inputs. This allows the model to develop proactive safety reasoning capabilities without depending on supervised safety-specific reasoning data. AlphaAlign demonstrates three key advantages: (1) Simplicity and efficiency, requiring only binary prompt safety labels and minimal RL steps for substantial improvements. (2) Breaking the safety-utility trade-off, by enhancing refusal of harmful content and reducing over-refusals, while simultaneously maintaining or even improving general task performance and robustness to unseen jailbreaks. (3) Deep alignment, fostering proactive safety reasoning that generates explicit safety rationales rather than relying on shallow refusal patterns.},
+  selected={true},
+  doi={10.48550/arXiv.2507.14987},
+  arxiv={2507.14987},
+  booktitle={The Fourteenth International Conference on Learning Representations},
+  html={https://openreview.net/forum?id=2XNb1JUKW3},
+  pdf={https://openreview.net/pdf?id=2XNb1JUKW3},
+  code={https://github.com/zy20031230/AlphaAlign}
+}
+
+% Verified source: https://pubmed.ncbi.nlm.nih.gov/42147490/
+@article{ocf,
+  abbr={Cell Press Blue},
+  preview={ocf-featured.jpg},
+  title={An integrated single-cell and spatial proteotranscriptomics atlas of fibroblast-driven immunoregulation within the human adult oral cavity},
+  author={Matuck, Bruno F. and Huynh, Khoa L. A. and Pereira, Diana and Easter, Quinn T. and Zhang, XiuYu and Kunz, Meik and Kumar, Nikhil and Pratapa, Aditya and Rupp, Brittany T. and Ghodke, Ameer and Predeus, Alexander V. and Fernandes, Alexandre and Szabó, Lili and Hartmann, Stefan and Harnischfeger, Nadja and Khavandgar, Zohreh and Beach, Margaret and Perez, Paola and Nilges, Benedikt and Moreno, Maria M. and Ko, Kang I. and Singh, Rohit and Tata, Purushothama Rao and Teichmann, Sarah A. and Kimple, Adam and Pringle, Sarah and Kretzschmar, Kai and Warner, Blake M. and Sequeira, Inês and Liu, Jinze and Byrd, Kevin M.},
+  journal={Cell Press Blue},
+  year={2026},
+  volume={1},
+  number={1},
+  pages={100007},
+  doi={10.1016/j.cpblue.2026.100007},
+  html={https://doi.org/10.1016/j.cpblue.2026.100007},
+  abstract={Summary: This study combines single-cell RNA sequencing with spatial protein and RNA measurements to map immune organization across adult oral tissues. The atlas identifies fibroblast populations and neighborhoods associated with immune signaling, using AstroSuite to connect cell identities, locations, and predicted interactions. Comparing healthy tissue with chronic periodontitis reveals changes in fibroblast states and their surrounding immune environments. The resulting resource provides a framework for investigating stromal contributions to oral inflammation and identifying candidate therapeutic pathways.},
+  selected={true},
+}
+
+% Verified source: https://pubmed.ncbi.nlm.nih.gov/40832247/
+@article{starcomm,
+  abbr={Preprint},
+  title={STARComm Scalably Detects Emergent Modules of Spatial Cell-Cell Communication in Inflammation and Cancer},
+  author={Huynh, Khoa L. A. and Matuck, Bruno F. and de Souza, Deiziane and Zhang, XiuYu and Fatobene, Giancarlo and Soares Junior, Luiz Alberto Valente and Ferraz da Silva, Luiz Fernando and Rocha, Vanderson Geraldo and Byrd, Kevin M. and Liu, Jinze},
+  journal={bioRxiv preprint},
+  year={2025},
+  doi={10.1101/2025.08.07.669133},
+  html={https://www.biorxiv.org/content/10.1101/2025.08.07.669133v1},
+  abstract={Summary: STARComm identifies spatial patterns of intercellular signaling from two- and three-dimensional transcriptomic data by grouping co-located ligand-receptor activity into multicellular communication modules. Analysis of more than 14 million cells across eight cancers uncovered shared and tumor-specific signaling programs. In salivary gland samples from chronic graft-versus-host disease, communication modules were associated with survival and highlighted candidate therapeutic pathways, illustrating the potential of spatial communication analysis for biomarker discovery and disease profiling.},
+  selected={true},
+}
+
+% Verified source: https://neurips.cc/virtual/2024/105608
+@inproceedings{zhang2024advancing,
 preview={soulspeak.png},
 abbr={SFLLM@NeurIPS 2024},
 title={Advancing Conversational Psychotherapy: Integrating Privacy, Dual-Memory, and Domain Expertise with Large Language Models},
 abstract={Mental health has increasingly become a global issue that reveals the limitations of traditional conversational psychotherapy, constrained by location, time, expense, and privacy concerns. In response to these challenges, we introduce SoulSpeak, a Large Language Model (LLM)-enabled chatbot designed to democratize access to psychotherapy. SoulSpeak improves upon the capabilities of standard LLM-enabled chatbots by incorporating a novel dual-memory component that combines short-term and long-term context via Retrieval Augmented Generation (RAG) to offer personalized responses while ensuring the preservation of user privacy and intimacy through a dedicated privacy module. In addition, it leverages a counseling chat dataset of therapist-client interactions and various prompting techniques to align the generated responses with psychotherapeutic methods. We introduce two fine-tuned BERT models to evaluate the system against existing LLMs and human therapists: the Conversational Psychotherapy Preference Model (CPPM) to simulate human preference among responses and another to assess response relevance to user input. CPPM is useful for training and evaluating psychotherapy-focused language models independent from SoulSpeak, helping with the constrained resources available for psychotherapy. Furthermore, the effectiveness of the dual-memory component and the robustness of the privacy module are also examined. Our findings highlight the potential and challenge of enhancing mental health care by offering an alternative that combines the expertise of traditional therapy with the advantages of LLMs, providing a promising way to address the accessibility and personalization gap in current mental health services.},
 author={Zhang, XiuYu and Luo, Zening},
-journal={Statistical Foundations of LLMs and Foundation Models (NeurIPS 2024 Workshop)},
+booktitle={NeurIPS Workshop on Statistical Frontiers in LLMs and Foundation Models},
+html={https://neurips.cc/virtual/2024/105608},
 year={2024},
 arxiv= {2412.02987},
 selected={true},
 doi={10.48550/arXiv.2412.02987}}
-}
 
-
+% Final volume citation: https://doi.org/10.1109/TMM.2023.3340548
 @article{10347512,
   abbr={IEEE TMM},
   preview={dda.png},
@@ -35,28 +114,24 @@ doi={10.48550/arXiv.2412.02987}}
   abstract={Digital Twin (DT) technologies create digital models of physical entities frequently in multimedia forms, which are crucial for concurrent simulation and analysis of real-world systems. In displaying DTs, Holographic-Type Communication (HTC) provides immersive multimedia access for users to interact with Holographic DTs (HDTs) by transmitting holographic data such as Light Field (LF) and other multisensory information. HDT has applications in remote education, work, and social interactions. However, the effective matching of demand and supply between HDT users and providers remains a challenge. To address this issue, we propose a hierarchical architecture that integrates the DT and HTC paradigms. This architecture incorporates a marketplace for HDT services, leveraging a formulated Double Dutch Auction (DDA) mechanism to optimize matching and pricing based on user and provider valuation. Furthermore, We employ an actor-critic-based Deep Reinforcement Learning (DRL) algorithm to train a DDA auctioneer that dynamically adjusts auction clocks during the auction process. As an alternative to the Multi-layer Perceptron (MLP), we experiment with a Deep Simplistic Variational Quantum Circuit (DSVQC) to reduce the number of parameters and enhance performance stability. Our simulations reveal that the proposed learning-based auctioneer achieves 92% optimal social welfare at a 37% auction information exchange cost for an MLP-based actor and 99% optimal social welfare at a 77% auction information exchange cost for a DSVQC-based actor.},
   journal={IEEE Transactions on Multimedia}, 
   title={Learning-Based Auction for Matching Demand and Supply of Holographic Digital Twin Over Immersive Communications}, 
-  year={2023},
+  year={2024},
   volume={26},
-  month={},
-  pages={5884-5896},
+  pages={5884--5896},
   html={https://ieeexplore.ieee.org/document/10347512},
   selected={true},
   doi={10.1109/TMM.2023.3340548}}
 
-
-  @article{pcpp_preprint,
+@article{pcpp_preprint,
 preview={pcpp.png},
 abbr={Preprint},
 abstract={Diffusion models have exhibited exciting capabilities in generating images and are also very promising for video creation. However, the inference speed of diffusion models is limited by the slow sampling process, restricting its use cases. The sequential denoising steps required for generating a single sample could take tens or hundreds of iterations and thus have become a significant bottleneck. This limitation is more salient for applications that are interactive in nature or require small latency. To address this challenge, we propose Partially Conditioned Patch Parallelism (PCPP) to accelerate the inference of high-resolution diffusion models. Using the fact that the difference between the images in adjacent diffusion steps is nearly zero, Patch Parallelism (PP) leverages multiple GPUs communicating asynchronously to compute patches of an image in multiple computing devices based on the entire image (all patches) in the previous diffusion step. PCPP develops PP to reduce computation in inference by conditioning only on parts of the neighboring patches in each diffusion step, which also decreases communication among computing devices. As a result, PCPP decreases the communication cost by around 70% compared to DistriFusion (the state of the art implementation of PP) and achieves 2.36-8.02 X inference speed-up using 4-8 GPUs compared to 2.32-6.72 X achieved by DistriFusion depending on the computing device configuration and resolution of generation at the cost of a possible decrease in image quality. PCPP demonstrates the potential to strike a favorable trade-off, enabling high-quality image generation with substantially reduced latency.},
 title={Partially Conditioned Patch Parallelism for Accelerated Diffusion Model Inference},
-author={Zhang, XiuYu and Luo, Zening, and Lu,  Michelle E.},
+author={Zhang, XiuYu and Luo, Zening and Lu, Michelle E.},
 journal={Preprint},
 year={2024},
 arxiv ={2412.02962},
 selected={true},
 doi={10.48550/arXiv.2412.02962}}
-}
-
 
 @project{clas,
   abbr={Report},
@@ -68,10 +143,6 @@ doi={10.48550/arXiv.2412.02962}}
   arxiv={2412.02996},
   doi={10.48550/arXiv.2412.02996},
   website={https://clas-chair-demo-fd2afad53737.herokuapp.com/},
-  selected={true},
+  selected={false},
   additional_info={Try the demo by clicking at the Website bottom. Please note that the first prompt entered may not return any results. Please wait for a few minutes and try again to let the model boot up}
 }
-
-
-
-

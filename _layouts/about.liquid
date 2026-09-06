@@ -51,7 +51,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">research</a>
+        <a href="{{ '/research/' | relative_url }}" style="color: inherit">research</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
@@ -75,23 +75,39 @@ layout: default
     education
   </h2>
   <div class="education">
-    <div class="education-item">
-      <img src="{{ '/assets/img/UC-Berkeley-Symbol.png' | relative_url }}" width="200" style="vertical-align: middle;">
-      <div class="education-details">
-        <p>Department of Electrical Engineering and Computer Science</p>
-        <p>Master of Engineering (MEng): Electrical Engineering and Computer Science</p>
-        <p>GPA: 3.975/4, Major GPA: 4/4</p>
-        <p>August 2023 – May 2024</p>
+    <div class="row mb-4">
+      <div class="col-md-3 text-muted">
+        Jan. 2026 – Present
+      </div>
+      <div class="col-md-9">
+        <h5 class="font-weight-bold">National University of Singapore</h5>
+        <h6 class="mb-2">Doctor of Philosophy (Ph.D.): Computer Science</h6>
+        <div class="font-italic">School of Computing | NExT Research Centre</div>
       </div>
     </div>
 
-    <div class="education-item">
-      <img src="{{ '/assets/img/UofT_Logo.png' | relative_url }}" width="200" style="vertical-align: middle;">
-      <div class="education-details">
-        <p>Department of Computer Science | Trinity College</p>
-        <p>Honours Bachelor of Science (HBSc) With High Distinction: Specialist in Computer Science</p>
-        <p>GPA: 3.94/4, Major GPA: 3.98/4</p>
-        <p>September 2019 – June 2022 (Finished the four-year Honours program in three years)</p>
+    <div class="row mb-4">
+      <div class="col-md-3 text-muted">
+        Aug. 2023 – May 2024
+      </div>
+      <div class="col-md-9">
+        <h5 class="font-weight-bold">University of California, Berkeley</h5>
+        <h6 class="mb-2">Master of Engineering (MEng): Electrical Engineering and Computer Science</h6>
+        <div class="font-italic">Department of Electrical Engineering and Computer Science</div>
+        <!--<div>GPA: 3.975/4, Major GPA: 4/4</div>-->
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-3 text-muted">
+        Sept. 2019 – June 2022
+      </div>
+      <div class="col-md-9">
+        <h5 class="font-weight-bold">University of Toronto</h5>
+        <h6 class="mb-2">Honours Bachelor of Science (HBSc) With High Distinction: Specialist in Computer Science</h6>
+        <div class="font-italic">Department of Computer Science | Trinity College</div>
+        <!--<div>GPA: 3.94/4, Major GPA: 3.98/4</div>-->
+        <!--<div class="text-muted small">(Finished the four-year Honours program in three years)</div>-->
       </div>
     </div>
   </div>
