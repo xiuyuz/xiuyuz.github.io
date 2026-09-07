@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: XiuYu
-middle_name: 
+middle_name:
 last_name: Zhang
 email: # xiuyuzhang@berkeley.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -14,7 +14,7 @@ footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 👋🏻 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # Personal monogram, shared with the main homepage
 
 url: https://xiuyuz.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -80,7 +80,7 @@ flickr_id: # your flickr id
 github_username: # xiuyuz # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
-inspirehep_id:  # Inspire HEP author ID
+inspirehep_id: # Inspire HEP author ID
 instagram_id: # your instagram id
 kaggle_id: # your kaggle id
 keybase_username: # your keybase user name
@@ -227,6 +227,11 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - _archive/
+  - scripts/
+  - assets/site/package.json
+  - assets/site/template.js
+  - assets/site/data.js
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
@@ -284,7 +289,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*"]
+  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*", "assets/site/*", "assets/site/**/*", "assets/js/distillpub/*"]
   uglifier_args:
     harmony: true
 

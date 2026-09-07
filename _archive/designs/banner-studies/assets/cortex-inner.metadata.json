@@ -1,0 +1,37 @@
+{
+  "structures": [
+    {
+      "name": "corpus-callosum",
+      "byteOffset": 0,
+      "byteLength": 120056,
+      "vertices": 2502,
+      "triangles": 5000
+    },
+    {
+      "name": "hippocampus",
+      "byteOffset": 120056,
+      "byteLength": 240056,
+      "vertices": 5002,
+      "triangles": 10000
+    },
+    {
+      "name": "amygdala",
+      "byteOffset": 360112,
+      "byteLength": 127400,
+      "vertices": 2656,
+      "triangles": 5304
+    }
+  ],
+  "normalization": {
+    "translation": [
+      -0.4395637512207031,
+      -30.838974952697754,
+      9.414459228515625
+    ],
+    "scale": 0.015591678537941777
+  },
+  "file": {
+    "bytes": 487512,
+    "sha256": "ee6f0918ddd5ca00f3327a491c0f546181f0c25ede7aca6b69dcc8172a1a0592"
+  }
+}

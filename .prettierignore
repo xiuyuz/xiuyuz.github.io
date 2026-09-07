@@ -10,3 +10,5 @@ lighthouse_results/**
 _posts/2015-10-20-math.md
 _sass/font-awesome/*.scss
 _sass/tabler-icons/*.scss
+# Preserved historical design work; not part of the published site.
+_archive/**

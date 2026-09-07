@@ -9,10 +9,10 @@
     align-items: start;
 
     @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;  // Change to single column
-      justify-items: center;       // Center items in the column
-      text-align: center;         // Center text
-      gap: 1rem;                  // Reduce gap for mobile
+      grid-template-columns: 1fr; // Change to single column
+      justify-items: center; // Center items in the column
+      text-align: center; // Center text
+      gap: 1rem; // Reduce gap for mobile
     }
 
     img {
@@ -25,11 +25,11 @@
 
   .education-details {
     padding-left: 1rem;
-    
+
     @media screen and (max-width: 768px) {
-      padding-left: 0;           // Remove padding on mobile
+      padding-left: 0; // Remove padding on mobile
     }
-    
+
     p {
       margin: 0.5rem 0;
     }

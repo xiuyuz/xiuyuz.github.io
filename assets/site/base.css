@@ -1,0 +1,64 @@
+@import url("./fonts.css");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+img,
+svg {
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+:focus-visible {
+  outline: 3px solid #587be5;
+  outline-offset: 5px;
+}
+.concept {
+  min-height: 100vh;
+  overflow: clip;
+}
+.concept img {
+  display: block;
+}
+.concept p {
+  text-wrap: pretty;
+}
+.concept a {
+  text-underline-offset: 4px;
+}
+.concept h1,
+.concept h2,
+.concept h3 {
+  text-wrap: balance;
+}
+.concept button {
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

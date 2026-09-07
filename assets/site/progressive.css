@@ -1,0 +1,31 @@
+/* The full academic content is present before the interactive modules load. */
+#site-root {
+  --study-accent: #899bab;
+  --study-tint: color-mix(in srgb, var(--study-accent) 11%, #f8fbff);
+  --study-ink: color-mix(in srgb, var(--study-accent) 77%, #27364c);
+  --study-glint: color-mix(in srgb, var(--study-accent) 50%, #e9f1ff);
+}
+html[data-theme="dark"] #site-root {
+  --study-accent: #a7c3df;
+  --study-tint: #1b2838;
+  --study-ink: #c1d5e8;
+  --study-glint: #eff7ff;
+}
+.no-js .ct-art-caption,
+.no-js .pc-effects-toggle,
+.no-js .pc-controls,
+.no-js .pc-abstract-toggle,
+.no-js .pc-enlarge-label {
+  display: none;
+}
+.no-js .pc-enlarge {
+  pointer-events: none;
+}
+.no-js [data-contact-open] {
+  cursor: default;
+}
+.ct-noscript-note {
+  color: #647382;
+  font: 13px/1.8 sans-serif;
+  margin: 20px 0;
+}

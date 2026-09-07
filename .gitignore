@@ -11,3 +11,5 @@ assets/libs/
 node_modules/
 vendor
 .idea
+# Keep the archived studies self-contained.
+!/_archive/designs/vendor/

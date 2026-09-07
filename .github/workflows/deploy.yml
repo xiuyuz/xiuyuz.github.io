@@ -67,6 +67,15 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - name: Build homepage
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run build:home
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
