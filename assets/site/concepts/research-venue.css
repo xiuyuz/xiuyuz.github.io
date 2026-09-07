@@ -1,0 +1,53 @@
+.research-venue {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+}
+.research-venue--accepted {
+  padding: 0 0 5px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #b9a5cb;
+  border-radius: 0;
+  color: #51435f;
+  font-size: 13px;
+  font-weight: 600;
+  flex-wrap: wrap;
+  row-gap: 3px;
+  gap: 12px;
+}
+.research-venue-name {
+  overflow-wrap: anywhere;
+  letter-spacing: 0.15px;
+}
+.research-venue--accepted .research-venue-year {
+  font-size: 11px;
+  font-weight: 400;
+  color: #8a8094;
+  letter-spacing: 0.2px;
+}
+.research-venue--preprint {
+  font-size: 10px;
+  font-weight: 400;
+  color: #83798c;
+  gap: 13px;
+}
+.research-venue-year {
+  color: #938b99;
+}
+@media (max-width: 480px) {
+  .research-venue--accepted {
+    font-size: 12px;
+    gap: 10px;
+  }
+  .research-venue--accepted .research-venue-year {
+    font-size: 10px;
+  }
+  .research-venue--preprint {
+    font-size: 9px;
+  }
+}
