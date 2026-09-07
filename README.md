@@ -55,4 +55,4 @@ Fonts are self-hosted; their SIL Open Font License files are included in [assets
 
 Original source credits are retained for [affiliation logos](assets/img/affiliations/SOURCES.md), [education logos](assets/img/education/SOURCES.md), and [research figures](assets/img/publication_preview/SOURCES.md). Dark-mode figure treatments are browser presentations; the original image files remain available.
 
-The existing Jekyll pages derive from al-folio. The repository's [LICENSE](LICENSE) retains its attribution.
+The repository's [MIT license](LICENSE) credits XiuYu Zhang for site-specific additions and retains Maruan Al-Shedivat’s attribution for the original al-folio template used by the existing Jekyll pages. Third-party libraries and fonts retain their own notices. Research figures, university and affiliation logos, and third-party publication content remain subject to their original rights and source credits.
