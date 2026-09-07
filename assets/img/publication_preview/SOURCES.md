@@ -22,10 +22,7 @@ svg = doc[0].get_svg_image(text_as_path=True)
 ```
 
 This retains the original vector paths, colors, text appearance, and full figure
-bounds. The existing `lmsm.svg` and `cosine_misleads.png` are Figure 2 in their
-respective papers. The older `ocf.png` contains an earlier, shorter version of the
-atlas overview. They remain available for existing references, but are not the
-default selected-research figures.
+bounds.
 
 The oral atlas graphical abstract is reproduced without alteration from the
 author's article, under the article's stated CC BY-NC-ND 4.0 terms. See the linked
