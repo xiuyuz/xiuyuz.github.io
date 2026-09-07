@@ -47,7 +47,7 @@ Use the Ruby version specified in the [deployment workflow](.github/workflows/de
 
 Pushing source changes to `main` runs that workflow. It regenerates the homepage, builds Jekyll, and publishes `_site` to the `gh-pages` branch.
 
-Earlier design studies and the previous homepage are preserved in [\_archive/](_archive/). They are excluded from the published site and active source checks.
+Earlier design studies, retired assets, and unused template examples are available in Git history. The working tree retains the current homepage and the dependencies for the existing Jekyll research and 404 pages.
 
 ## Asset credits
 

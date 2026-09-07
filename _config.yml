@@ -221,29 +221,18 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
-  - _archive/
   - scripts/
   - assets/site/package.json
   - assets/site/template.js
   - assets/site/data.js
   - bin/
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
-  - Dockerfile
-  - docker-compose.yml
-  - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
-  - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
-  - readme_preview/
   - vendor
 keep_files:
   - CNAME
@@ -283,7 +272,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*", "assets/site/*", "assets/site/**/*", "assets/js/distillpub/*"]
+  exclude: ["robots.txt", "assets/libs/**/*", "assets/site/*", "assets/site/**/*"]
   uglifier_args:
     harmony: true
 
