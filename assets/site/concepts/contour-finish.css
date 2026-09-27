@@ -494,7 +494,7 @@ html[data-theme="dark"] .concept-21 .pc-enlarge img {
 html[data-theme="dark"] .concept-21 .ctr-dialog img {
   background: #172230;
 }
-/* Brief fallback while a dark SVG loads; the finished asset needs no filter. */
+/* Brief fallback while a dark asset loads; the finished asset needs no filter. */
 html[data-theme="dark"] .concept-21 .pc-enlarge img:not([data-theme-asset="dark"]),
 html[data-theme="dark"] .concept-21 .ctr-dialog:not([data-original-colors="true"]) img:not([data-theme-asset="dark"]) {
   filter: invert(1) hue-rotate(180deg);
