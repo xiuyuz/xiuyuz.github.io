@@ -1,4 +1,4 @@
-// Runtime SVG presentation only. Original raster and vector assets stay intact.
+// Change colors at source resolution; original downloadable assets stay intact.
 const MAX_CACHED_ASSETS = 8;
 const contexts = new WeakMap();
 
@@ -66,7 +66,7 @@ function imageDimensions(uri, context) {
     image.onload = () => {
       clean();
       if (image.naturalWidth && image.naturalHeight) {
-        resolve({ width: image.naturalWidth, height: image.naturalHeight });
+        resolve({ width: image.naturalWidth, height: image.naturalHeight, image });
       } else {
         reject(new Error("The source figure has no intrinsic dimensions."));
       }
@@ -105,6 +105,83 @@ function validRegions(regions) {
       throw new TypeError("Protected figure regions need finite pixel coordinates and positive dimensions.");
     }
     return rect;
+  });
+}
+
+// The same sRGB mapping as the SVG filter below, with clamping between stages.
+// Applying it to source pixels/paints avoids browser-dependent filter textures.
+function nightColor(r, g, b) {
+  const clamp = (value) => Math.max(0, Math.min(255, value));
+  return [
+    23 + (209 / 255) * clamp(0.574 * r - 1.43 * g - 0.144 * b + 255),
+    34 + (204 / 255) * clamp(-0.426 * r - 0.43 * g - 0.144 * b + 255),
+    48 + (196 / 255) * clamp(-0.426 * r - 1.43 * g + 0.856 * b + 255),
+  ];
+}
+
+function vectorPresentation(bytes, context) {
+  const view = context.view;
+  const parsed = new view.DOMParser().parseFromString(new view.TextDecoder().decode(bytes), "image/svg+xml");
+  const svg = parsed.documentElement;
+  if (svg.localName !== "svg" || parsed.querySelector("parsererror")) throw new Error("The vector figure could not be parsed.");
+  // Complex paint servers and authored CSS need the general filter fallback.
+  // The publication SVGs use paths, text outlines, and explicit hexadecimal paints.
+  if (svg.querySelector("image, filter, mask, style, foreignObject, [style]")) return null;
+  if (!svg.hasAttribute("fill")) svg.setAttribute("fill", "#000000");
+  const colors = new Map();
+  for (const element of [svg, ...svg.querySelectorAll("*")]) {
+    for (const attribute of ["fill", "stroke", "stop-color", "color"]) {
+      const value = element.getAttribute(attribute);
+      if (!value || value === "none") continue;
+      if (!/^#(?:[\da-f]{3}|[\da-f]{6})$/i.test(value)) return null;
+      if (!colors.has(value)) {
+        const hex = value.length === 4 ? value.slice(1).replace(/./g, "$&$&") : value.slice(1);
+        const channels = [0, 2, 4].map((offset) => parseInt(hex.slice(offset, offset + 2), 16));
+        colors.set(
+          value,
+          `rgb(${nightColor(...channels)
+            .map(Math.round)
+            .join(",")})`
+        );
+      }
+      element.setAttribute(attribute, colors.get(value));
+    }
+  }
+  return new view.Blob([new view.XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" });
+}
+
+async function rasterPresentation(image, width, height, regions, doc) {
+  const canvas = doc.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  if (!context) throw new Error("Figure color conversion is unavailable.");
+  context.drawImage(image, 0, 0);
+  const pixels = context.getImageData(0, 0, width, height);
+  let protectedPixels;
+  if (regions.length) {
+    // Draw coverage separately so rounded photo edges and transparent crests
+    // retain their original colors without changing the source alpha channel.
+    context.clearRect(0, 0, width, height);
+    context.fillStyle = "white";
+    context.beginPath();
+    for (const { x, y, width: w, height: h, rx } of regions) context.roundRect(x, y, w, h, rx);
+    context.fill();
+    protectedPixels = context.getImageData(0, 0, width, height).data;
+  }
+  for (let offset = 0; offset < pixels.data.length; offset += 4) {
+    if (!pixels.data[offset + 3]) continue;
+    const coverage = protectedPixels ? protectedPixels[offset + 3] / 255 : 0;
+    if (coverage === 1) continue;
+    const color = nightColor(pixels.data[offset], pixels.data[offset + 1], pixels.data[offset + 2]);
+    for (let channel = 0; channel < 3; channel++) {
+      pixels.data[offset + channel] = coverage * pixels.data[offset + channel] + (1 - coverage) * color[channel];
+    }
+  }
+  context.putImageData(pixels, 0, 0);
+  // Lossless output at the original pixel dimensions, shared by preview and viewer.
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error("The adapted figure could not be encoded."))), "image/png");
   });
 }
 
@@ -184,11 +261,18 @@ async function createPresentation(source, regions, context) {
   if (!response.ok) throw new Error("Could not load figure (" + response.status + ").");
   const bytes = new Uint8Array(await response.arrayBuffer());
   assertActive(context);
-  const uri = dataUri(bytes, mimeFor(source, response.headers.get("content-type"), bytes), context.view);
-  const { width, height } = await imageDimensions(uri, context);
+  const mime = mimeFor(source, response.headers.get("content-type"), bytes);
+  const uri = dataUri(bytes, mime, context.view);
+  const { width, height, image } = await imageDimensions(uri, context);
+  let presentation;
+  if (mime === "image/svg+xml") {
+    presentation = regions.length ? null : vectorPresentation(bytes, context);
+    presentation ||= new context.view.Blob([wrapper(uri, width, height, regions)], { type: "image/svg+xml" });
+  } else {
+    presentation = await rasterPresentation(image, width, height, regions, image.ownerDocument);
+  }
   assertActive(context);
-  const svg = wrapper(uri, width, height, regions);
-  const url = context.view.URL.createObjectURL(new context.view.Blob([svg], { type: "image/svg+xml" }));
+  const url = context.view.URL.createObjectURL(presentation);
   context.urls.add(url);
   try {
     await imageDimensions(url, context);
@@ -202,7 +286,9 @@ async function createPresentation(source, regions, context) {
 }
 
 /**
- * Return a self-contained SVG object URL for the source's dark presentation.
+ * Return an object URL for the source's dark presentation: native-size lossless
+ * PNG for raster sources, original vector geometry for supported SVG figures.
+ * Complex SVG paints retain the general SVG filter fallback.
  * Protected rectangles use original image pixel coordinates. Passing [] disables
  * the default OCF protection, while omitted regions use the asset configuration.
  * Existing consumers keep working after an LRU eviction: object URLs are revoked
