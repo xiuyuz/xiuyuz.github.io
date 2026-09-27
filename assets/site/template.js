@@ -11,7 +11,7 @@ export function renderPage(data) {
         new Date(`${data.lastUpdated}T00:00:00Z`)
       )
     : "";
-  return `<div class="concept concept-21 study-page particle-study" id="ct-top"><div class="ct-wrap"><header class="ct-nav"><a class="ct-monogram" href="#ct-top" aria-label="XiuYu Zhang home">xz<span>.</span></a><nav aria-label="Page navigation"><a href="#ct-about">About</a><a href="#ct-research">Research</a><button class="ct-contact-trigger" type="button" data-contact-open>Contact <span aria-hidden="true">↗</span></button></nav></header><section class="ct-hero" aria-labelledby="ct-name"><div class="ct-hero-label"><span>COMPUTER SCIENCE · NUS</span><span>SINGAPORE</span></div><div class="ct-title-row"><h1 class="ct-name-effects" id="ct-name">XiuYu <em>Zhang</em></h1><div class="ct-identity"><p>${escape(
+  return `<div class="concept concept-21 study-page particle-study" id="ct-top"><div class="ct-wrap"><header class="ct-nav"><a class="ct-monogram" href="#ct-top" aria-label="XiuYu Zhang home">xz<span>.</span></a><nav aria-label="Page navigation"><a href="#ct-about">About</a><a href="#ct-research">Research</a><button class="ct-contact-trigger" type="button" data-contact-open>Contact <span aria-hidden="true">↗</span></button></nav></header><section class="ct-hero" aria-labelledby="ct-name"><div class="ct-hero-label"><span>COMPUTER SCIENCE · NUS</span><span>SINGAPORE</span></div><div class="ct-title-row"><h1 class="ct-name-effects" id="ct-name">XiuYu <em>Zhang</em></h1><div class="ct-profile"><div class="ct-identity"><p>${escape(
     data.role
   )}<br>${escape(data.institution)}</p><div class="ct-affiliations" role="group" aria-label="Research affiliations">${data.groups
     .map((group) =>
@@ -25,9 +25,9 @@ export function renderPage(data) {
         "ct-affiliation"
       )
     )
-    .join(
-      ""
-    )}</div></div></div><div class="ct-art-panel bs-panel" data-research-focus="reasoning"><div class="ct-topics"><span class="ct-label">RESEARCH INTERESTS</span>${data.interests
+    .join("")}</div></div><figure class="ct-portrait"><img src="/assets/img/profile-s1.jpg" alt="Portrait of ${escape(
+    data.name
+  )}" width="560" height="560" decoding="async"></figure></div></div><div class="ct-art-panel bs-panel" data-research-focus="reasoning"><div class="ct-topics"><span class="ct-label">RESEARCH INTERESTS</span>${data.interests
     .map(
       (interest, i) =>
         `<div class="ct-interest" data-research-focus="${

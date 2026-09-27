@@ -45,6 +45,7 @@ const page = `<!doctype html>
   <link rel="stylesheet" href="/assets/site/banner/particle-refinements.css">
   <link rel="stylesheet" href="/assets/site/concepts/contour-finish.css">
   <link rel="stylesheet" href="/assets/site/progressive.css">
+  <link rel="stylesheet" href="/assets/site/portrait.css">
   <script type="application/ld+json">${JSON.stringify(structuredData).replaceAll("<", "\\u003c")}</script>
   <script type="module" src="/assets/site/main.js"></script>
 </head>

@@ -27,3 +27,6 @@ vendor
 /.auth/
 /.codex/
 /.agents/
+
+# Keep the uncropped personal photo out of the published repository.
+/assets/img/profile_image.jpg
