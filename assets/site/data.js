@@ -1,14 +1,32 @@
 // Homepage content. Update lastUpdated when changing the public page.
 export const data = {
   name: "XiuYu Zhang",
-  lastUpdated: "2026-09-07",
+  lastUpdated: "2026-09-27",
   role: "Ph.D. Student · Computer Science",
   institution: "National University of Singapore",
   scholarUrl: "https://scholar.google.com/citations?user=-7oao10AAAAJ",
   githubUrl: "https://github.com/xiuyuz",
   interests: ["Reasoning & representation", "AI safety & alignment", "Multimodal intelligence"],
-  selectedPaperKeys: ["lmsm", "see", "cosine_misleads", "alphaalign", "ocf"],
+  selectedPaperKeys: ["opsd_reference", "lmsm", "see", "cosine_misleads", "alphaalign", "ocf"],
   papers: [
+    {
+      key: "opsd_reference",
+      title: "What Does Privileged Information Add to On-Policy Self-Distillation?",
+      authors: "XiuYu Zhang, Wei Chow, Junfeng Fang, Xingyu Zhu, Zhenkai Liang, Tat-Seng Chua",
+      year: "2026",
+      venue: "arXiv preprint",
+      tag: "Preprint",
+      url: "https://arxiv.org/abs/2609.20612",
+      image: "/assets/img/publication_preview/opsd-reference-figure1.png",
+      summary: "This study isolates what privileged references add beyond reference-free on-policy self-distillation using AMPLE-Math.",
+      carouselExcerpt:
+        "On-policy self-distillation (OPSD) lets a language model learn from a frozen copy of itself that sees an answer or a worked solution. Giving the teacher this extra information seems to offer the student more to learn, but how much does it add beyond distillation itself? To isolate that contribution, we construct AMPLE-Math, a reusable suite of 5,319 mathematical problems with six reasoning views that share the same answer, and compare each view with matched reference-free distillation.",
+      abstract:
+        "On-policy self-distillation (OPSD) lets a language model learn from a frozen copy of itself that sees an answer or a worked solution. Giving the teacher this extra information seems to offer the student more to learn, but how much does it add beyond distillation itself? To isolate that contribution, we construct AMPLE-Math, a reusable suite of 5,319 mathematical problems with six reasoning views that share the same answer, and compare each view with matched reference-free distillation. With a thinking-enabled teacher supervising direct-response rollouts, reference-free distillation accounts for much of Qwen3-1.7B's improvement under thinking-enabled evaluation, both in domain and on external benchmarks. Evidence for an additional reference benefit is modest in Qwen, strongest for a polished solution, whereas complete traces add two percentage points in SmolLM3-3B at step 50. These benefits depend on the student being trained. At the same checkpoint, replacing short direct-response rollouts with long thinking-enabled rollouts turns gains into losses in both families while the problems, references, and evaluation stay fixed. Teacher profiles and matched loss interventions in Qwen further show that changing token-level supervision can leave student behavior largely unchanged. Together, these findings suggest that OPSD can improve access to existing reasoning capabilities through parameters shared by direct-response and thinking-enabled inference. The value of a privileged reference is what it adds to this cross-mode transfer, not how much of the solution it reveals.",
+      code: "https://github.com/xiuyuz/opsd-reference-study",
+      dataset: "https://huggingface.co/datasets/xiuyuz/ample-math",
+      datasetLabel: "AMPLE-Math dataset",
+    },
     {
       key: "lmsm",
       title: "LMSM: LLM Security Framework Inspired by Linux Security Modules",

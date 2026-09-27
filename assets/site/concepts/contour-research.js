@@ -29,6 +29,10 @@ export function renderResearch(data) {
             "<strong>XiuYu Zhang</strong>"
           )}</p><div class="ctr-links"><a href="${escape(p.url)}" ${external}>Read paper <span aria-hidden="true">↗</span></a>${
             p.code ? `<a href="${escape(p.code)}" ${external}>Code <span aria-hidden="true">↗</span></a>` : ""
+          }${
+            p.dataset
+              ? `<a href="${escape(p.dataset)}" ${external}>${escape(p.datasetLabel || "Dataset")} <span aria-hidden="true">↗</span></a>`
+              : ""
           }</div></div></li>`
       )
       .join("")}</ol>

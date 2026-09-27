@@ -180,23 +180,30 @@
                     ><svg class="pc-effects-play" width="10" height="12" viewBox="0 0 10 12" aria-hidden="true">
                       <path d="m2 2 6 4-6 4Z" fill="currentColor" /></svg
                     ><span class="pc-effects-label">Pause effects</span></button
-                  ><span class="pc-counter" aria-hidden="true"><span data-pc-current>01</span><span class="pc-counter-rule">/</span>05</span>
+                  ><span class="pc-counter" aria-hidden="true"><span data-pc-current>01</span><span class="pc-counter-rule">/</span>06</span>
                 </div>
               </div>
               <div class="pc-window">
                 <div class="pc-track">
-                  <article class="pc-slide" role="group" aria-roledescription="slide" aria-label="1 of 5" data-pc-index="0" data-paper-key="lmsm">
+                  <article
+                    class="pc-slide"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label="1 of 6"
+                    data-pc-index="0"
+                    data-paper-key="opsd_reference"
+                  >
                     <div class="pc-feature">
                       <button
                         class="pc-enlarge"
                         type="button"
-                        data-figure="/assets/img/publication_preview/lmsm-figure1.svg"
-                        data-title="LMSM: LLM Security Framework Inspired by Linux Security Modules"
-                        aria-label="Enlarge figure from LMSM: LLM Security Framework Inspired by Linux Security Modules"
+                        data-figure="/assets/img/publication_preview/opsd-reference-figure1.png"
+                        data-title="What Does Privileged Information Add to On-Policy Self-Distillation?"
+                        aria-label="Enlarge figure from What Does Privileged Information Add to On-Policy Self-Distillation?"
                       >
                         <img
-                          src="/assets/img/publication_preview/lmsm-figure1.svg"
-                          alt="Research figure from LMSM: LLM Security Framework Inspired by Linux Security Modules"
+                          src="/assets/img/publication_preview/opsd-reference-figure1.png"
+                          alt="Research figure from What Does Privileged Information Add to On-Policy Self-Distillation?"
                           loading="eager"
                           decoding="async"
                           draggable="false"
@@ -209,6 +216,84 @@
                       <div class="pc-abstract">
                         <span class="pc-abstract-label">Abstract</span>
                         <div class="pc-abstract-body" id="pc-abstract-0">
+                          <p data-pc-excerpt>
+                            On-policy self-distillation (OPSD) lets a language model learn from a frozen copy of itself that sees an answer or a
+                            worked solution. Giving the teacher this extra information seems to offer the student more to learn, but how much does it
+                            add beyond distillation itself? To isolate that contribution, we construct AMPLE-Math, a reusable suite of 5,319
+                            mathematical problems with six reasoning views that share the same answer, and compare each view with matched
+                            reference-free distillation.
+                          </p>
+                          <p data-pc-full hidden>
+                            On-policy self-distillation (OPSD) lets a language model learn from a frozen copy of itself that sees an answer or a
+                            worked solution. Giving the teacher this extra information seems to offer the student more to learn, but how much does it
+                            add beyond distillation itself? To isolate that contribution, we construct AMPLE-Math, a reusable suite of 5,319
+                            mathematical problems with six reasoning views that share the same answer, and compare each view with matched
+                            reference-free distillation. With a thinking-enabled teacher supervising direct-response rollouts, reference-free
+                            distillation accounts for much of Qwen3-1.7B&#39;s improvement under thinking-enabled evaluation, both in domain and on
+                            external benchmarks. Evidence for an additional reference benefit is modest in Qwen, strongest for a polished solution,
+                            whereas complete traces add two percentage points in SmolLM3-3B at step 50. These benefits depend on the student being
+                            trained. At the same checkpoint, replacing short direct-response rollouts with long thinking-enabled rollouts turns gains
+                            into losses in both families while the problems, references, and evaluation stay fixed. Teacher profiles and matched loss
+                            interventions in Qwen further show that changing token-level supervision can leave student behavior largely unchanged.
+                            Together, these findings suggest that OPSD can improve access to existing reasoning capabilities through parameters shared
+                            by direct-response and thinking-enabled inference. The value of a privileged reference is what it adds to this cross-mode
+                            transfer, not how much of the solution it reveals.
+                          </p>
+                        </div>
+                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-0">
+                          <span data-pc-abstract-label>Read full abstract</span><span data-pc-abstract-symbol aria-hidden="true">+</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="pc-caption">
+                      <h3>
+                        <a href="https://arxiv.org/abs/2609.20612" target="_blank" rel="noopener noreferrer"
+                          >What Does Privileged Information Add to On-Policy Self-Distillation?</a
+                        >
+                      </h3>
+                      <div class="pc-caption-footer">
+                        <div class="pc-meta">
+                          <span class="research-venue research-venue--preprint"
+                            ><span>Preprint</span> <span class="research-venue-year">2026</span></span
+                          >
+                        </div>
+                        <a class="pc-details" href="#selected-paper-opsd_reference">Research details <span aria-hidden="true">↓</span></a>
+                      </div>
+                    </div>
+                  </article>
+                  <article
+                    class="pc-slide"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label="2 of 6"
+                    data-pc-index="1"
+                    data-paper-key="lmsm"
+                    inert
+                    aria-hidden="true"
+                  >
+                    <div class="pc-feature">
+                      <button
+                        class="pc-enlarge"
+                        type="button"
+                        data-figure="/assets/img/publication_preview/lmsm-figure1.svg"
+                        data-title="LMSM: LLM Security Framework Inspired by Linux Security Modules"
+                        aria-label="Enlarge figure from LMSM: LLM Security Framework Inspired by Linux Security Modules"
+                      >
+                        <img
+                          src="/assets/img/publication_preview/lmsm-figure1.svg"
+                          alt="Research figure from LMSM: LLM Security Framework Inspired by Linux Security Modules"
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        /><span class="pc-enlarge-label" aria-hidden="true"
+                          ><svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                            <path d="M10 2h4v4M14 2 9 7M6 14H2v-4M2 14l5-5" stroke="currentColor" stroke-width="1.2" /></svg
+                          >Enlarge figure</span
+                        >
+                      </button>
+                      <div class="pc-abstract">
+                        <span class="pc-abstract-label">Abstract</span>
+                        <div class="pc-abstract-body" id="pc-abstract-1">
                           <p data-pc-excerpt>
                             We present Language Model Security Modules (LMSM), a security framework that adapts the separation behind Linux Security
                             Modules (LSM) to LLM serving. In LMSM, a selected security backend exposes calibrated evidence, a versioned policy
@@ -234,7 +319,7 @@
                             advances in interpretability and model-internal analysis a common path to runtime enforcement.
                           </p>
                         </div>
-                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-0">
+                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-1">
                           <span data-pc-abstract-label>Read full abstract</span><span data-pc-abstract-symbol aria-hidden="true">+</span>
                         </button>
                       </div>
@@ -259,8 +344,8 @@
                     class="pc-slide"
                     role="group"
                     aria-roledescription="slide"
-                    aria-label="2 of 5"
-                    data-pc-index="1"
+                    aria-label="3 of 6"
+                    data-pc-index="2"
                     data-paper-key="see"
                     inert
                     aria-hidden="true"
@@ -287,7 +372,7 @@
                       </button>
                       <div class="pc-abstract">
                         <span class="pc-abstract-label">Abstract</span>
-                        <div class="pc-abstract-body" id="pc-abstract-1">
+                        <div class="pc-abstract-body" id="pc-abstract-2">
                           <p data-pc-excerpt>
                             We introduce Self-Evaluation Elicitation (SEE), a method that surfaces this latent ability through a short cycle
                             comprising a calibration-coupled reinforcement learning phase that improves the answer and predicts the judge, followed by
@@ -310,7 +395,7 @@
                             self-evaluation as a problem of elicitation rather than acquisition.
                           </p>
                         </div>
-                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-1">
+                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-2">
                           <span data-pc-abstract-label>Read full abstract</span><span data-pc-abstract-symbol aria-hidden="true">+</span>
                         </button>
                       </div>
@@ -337,8 +422,8 @@
                     class="pc-slide"
                     role="group"
                     aria-roledescription="slide"
-                    aria-label="3 of 5"
-                    data-pc-index="2"
+                    aria-label="4 of 6"
+                    data-pc-index="3"
                     data-paper-key="cosine_misleads"
                     inert
                     aria-hidden="true"
@@ -365,7 +450,7 @@
                       </button>
                       <div class="pc-abstract">
                         <span class="pc-abstract-label">Abstract</span>
-                        <div class="pc-abstract-body" id="pc-abstract-2">
+                        <div class="pc-abstract-body" id="pc-abstract-3">
                           <p data-pc-excerpt>
                             Latent visual reasoning (LVR) inserts supervised latent tokens between perception and answer generation in vision-language
                             models (VLMs). The field uses alignment between these latents and their visual targets, i.e., cosine similarity or mean
@@ -387,7 +472,7 @@
                             it nominally optimizes.
                           </p>
                         </div>
-                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-2">
+                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-3">
                           <span data-pc-abstract-label>Read full abstract</span><span data-pc-abstract-symbol aria-hidden="true">+</span>
                         </button>
                       </div>
@@ -412,8 +497,8 @@
                     class="pc-slide"
                     role="group"
                     aria-roledescription="slide"
-                    aria-label="4 of 5"
-                    data-pc-index="3"
+                    aria-label="5 of 6"
+                    data-pc-index="4"
                     data-paper-key="alphaalign"
                     inert
                     aria-hidden="true"
@@ -440,7 +525,7 @@
                       </button>
                       <div class="pc-abstract">
                         <span class="pc-abstract-label">Abstract</span>
-                        <div class="pc-abstract-body" id="pc-abstract-3">
+                        <div class="pc-abstract-body" id="pc-abstract-4">
                           <p data-pc-excerpt>
                             We propose AlphaAlign, a simple yet effective pure reinforcement learning (RL) framework with verifiable safety reward
                             designed to incentivize this latent safety awareness through proactive safety reasoning. AlphaAlign employs a dual-reward
@@ -466,7 +551,7 @@
                             safety rationales rather than relying on shallow refusal patterns.
                           </p>
                         </div>
-                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-3">
+                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-4">
                           <span data-pc-abstract-label>Read full abstract</span><span data-pc-abstract-symbol aria-hidden="true">+</span>
                         </button>
                       </div>
@@ -493,8 +578,8 @@
                     class="pc-slide"
                     role="group"
                     aria-roledescription="slide"
-                    aria-label="5 of 5"
-                    data-pc-index="4"
+                    aria-label="6 of 6"
+                    data-pc-index="5"
                     data-paper-key="ocf"
                     inert
                     aria-hidden="true"
@@ -521,7 +606,7 @@
                       </button>
                       <div class="pc-abstract">
                         <span class="pc-abstract-label">Abstract</span>
-                        <div class="pc-abstract-body" id="pc-abstract-4">
+                        <div class="pc-abstract-body" id="pc-abstract-5">
                           <p data-pc-excerpt>
                             We present an integrated single-cell and spatial proteotranscriptomic atlas profiling &gt;250,000 single-cell
                             transcriptomes and &gt;4 million spatially resolved cells across 13 niches. Using our AI-enabled AstroSuite, we defined
@@ -544,7 +629,7 @@
                             and provides a scalable framework to target stromal-immune interactions across barrier organs.
                           </p>
                         </div>
-                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-4">
+                        <button class="pc-abstract-toggle" type="button" data-pc-abstract-toggle aria-expanded="false" aria-controls="pc-abstract-5">
                           <span data-pc-abstract-label>Read full abstract</span><span data-pc-abstract-symbol aria-hidden="true">+</span>
                         </button>
                       </div>
@@ -574,7 +659,7 @@
                     class="pc-picker is-current"
                     type="button"
                     data-pc-goto="0"
-                    aria-label="Show figure 1 of 5: LMSM: LLM Security Framework Inspired by Linux Security Modules"
+                    aria-label="Show figure 1 of 6: What Does Privileged Information Add to On-Policy Self-Distillation?"
                     aria-current="true"
                   >
                     <span>01</span></button
@@ -582,30 +667,37 @@
                     class="pc-picker"
                     type="button"
                     data-pc-goto="1"
-                    aria-label="Show figure 2 of 5: Self-Evaluation Is Already There: Eliciting Latent Judge Calibration in Base LLMs with Minimal Data"
+                    aria-label="Show figure 2 of 6: LMSM: LLM Security Framework Inspired by Linux Security Modules"
                   >
                     <span>02</span></button
                   ><button
                     class="pc-picker"
                     type="button"
                     data-pc-goto="2"
-                    aria-label="Show figure 3 of 5: Cosine Misleads: Auxiliary Losses Reshape Vision Language Models, Not Their Latents"
+                    aria-label="Show figure 3 of 6: Self-Evaluation Is Already There: Eliciting Latent Judge Calibration in Base LLMs with Minimal Data"
                   >
                     <span>03</span></button
                   ><button
                     class="pc-picker"
                     type="button"
                     data-pc-goto="3"
-                    aria-label="Show figure 4 of 5: AlphaAlign: Incentivizing Safety Alignment with Extremely Simplified Reinforcement Learning"
+                    aria-label="Show figure 4 of 6: Cosine Misleads: Auxiliary Losses Reshape Vision Language Models, Not Their Latents"
                   >
                     <span>04</span></button
                   ><button
                     class="pc-picker"
                     type="button"
                     data-pc-goto="4"
-                    aria-label="Show figure 5 of 5: An integrated single-cell and spatial proteotranscriptomics atlas of fibroblast-driven immunoregulation within the human adult oral cavity"
+                    aria-label="Show figure 5 of 6: AlphaAlign: Incentivizing Safety Alignment with Extremely Simplified Reinforcement Learning"
                   >
-                    <span>05</span>
+                    <span>05</span></button
+                  ><button
+                    class="pc-picker"
+                    type="button"
+                    data-pc-goto="5"
+                    aria-label="Show figure 6 of 6: An integrated single-cell and spatial proteotranscriptomics atlas of fibroblast-driven immunoregulation within the human adult oral cavity"
+                  >
+                    <span>06</span>
                   </button>
                 </div>
                 <div class="pc-arrows">
@@ -624,11 +716,34 @@
             </div>
             <div class="ctr-list-heading">
               <h3>Selected research</h3>
-              <span>05 WORKS</span>
+              <span>06 WORKS</span>
             </div>
             <ol class="ctr-publications">
-              <li class="ctr-publication" id="selected-paper-lmsm">
+              <li class="ctr-publication" id="selected-paper-opsd_reference">
                 <span class="ctr-number" aria-hidden="true">01</span>
+                <div class="ctr-citation">
+                  <div class="ctr-meta">
+                    <span class="research-venue research-venue--preprint"><span>Preprint</span> <span class="research-venue-year">2026</span></span>
+                  </div>
+                  <h4>
+                    <a href="https://arxiv.org/abs/2609.20612" target="_blank" rel="noopener noreferrer"
+                      >What Does Privileged Information Add to On-Policy Self-Distillation?</a
+                    >
+                  </h4>
+                  <p class="ctr-authors"><strong>XiuYu Zhang</strong>, Wei Chow, Junfeng Fang, Xingyu Zhu, Zhenkai Liang, Tat-Seng Chua</p>
+                  <div class="ctr-links">
+                    <a href="https://arxiv.org/abs/2609.20612" target="_blank" rel="noopener noreferrer"
+                      >Read paper <span aria-hidden="true">↗</span></a
+                    ><a href="https://github.com/xiuyuz/opsd-reference-study" target="_blank" rel="noopener noreferrer"
+                      >Code <span aria-hidden="true">↗</span></a
+                    ><a href="https://huggingface.co/datasets/xiuyuz/ample-math" target="_blank" rel="noopener noreferrer"
+                      >AMPLE-Math dataset <span aria-hidden="true">↗</span></a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="ctr-publication" id="selected-paper-lmsm">
+                <span class="ctr-number" aria-hidden="true">02</span>
                 <div class="ctr-citation">
                   <div class="ctr-meta">
                     <span class="research-venue research-venue--preprint"><span>Preprint</span> <span class="research-venue-year">2026</span></span>
@@ -647,7 +762,7 @@
                 </div>
               </li>
               <li class="ctr-publication" id="selected-paper-see">
-                <span class="ctr-number" aria-hidden="true">02</span>
+                <span class="ctr-number" aria-hidden="true">03</span>
                 <div class="ctr-citation">
                   <div class="ctr-meta">
                     <span
@@ -672,7 +787,7 @@
                 </div>
               </li>
               <li class="ctr-publication" id="selected-paper-cosine_misleads">
-                <span class="ctr-number" aria-hidden="true">03</span>
+                <span class="ctr-number" aria-hidden="true">04</span>
                 <div class="ctr-citation">
                   <div class="ctr-meta">
                     <span class="research-venue research-venue--preprint"><span>Preprint</span> <span class="research-venue-year">2026</span></span>
@@ -693,7 +808,7 @@
                 </div>
               </li>
               <li class="ctr-publication" id="selected-paper-alphaalign">
-                <span class="ctr-number" aria-hidden="true">04</span>
+                <span class="ctr-number" aria-hidden="true">05</span>
                 <div class="ctr-citation">
                   <div class="ctr-meta">
                     <span class="research-venue research-venue--accepted" title="The Fourteenth International Conference on Learning Representations"
@@ -716,7 +831,7 @@
                 </div>
               </li>
               <li class="ctr-publication" id="selected-paper-ocf">
-                <span class="ctr-number" aria-hidden="true">05</span>
+                <span class="ctr-number" aria-hidden="true">06</span>
                 <div class="ctr-citation">
                   <div class="ctr-meta">
                     <span class="research-venue research-venue--accepted" title="Cell Press Blue"
@@ -811,7 +926,7 @@
               <a class="" href="https://scholar.google.com/citations?user=-7oao10AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a
               ><a class="" href="https://github.com/xiuyuz" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#ct-top">Back to top ↑</a>
             </div>
-            <p>XiuYu Zhang · Last updated <time datetime="2026-09-07">September 7, 2026</time></p>
+            <p>XiuYu Zhang · Last updated <time datetime="2026-09-27">September 27, 2026</time></p>
           </footer>
         </div>
         <dialog class="ct-contact-dialog" aria-labelledby="ct-contact-title" aria-describedby="ct-contact-description">

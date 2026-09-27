@@ -1,12 +1,14 @@
 # Selected research figure sources
 
-Verified on 6 September 2026. Selected research defaults to each paper's first
+OPSD reference study verified on 27 September 2026; earlier sources verified on
+6 September 2026. Selected research defaults to each paper's first
 numbered figure, preserving the complete original. The oral atlas uses the
 graphical abstract explicitly chosen by XiuYu instead. These assets are figure
 exports or original downloads, not redrawn illustrations.
 
 | Paper                       | Local asset                   | Figure and original source                                                                                                                                                                                                                                                                                                                  |
 | --------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OPSD reference study        | `opsd-reference-figure1.png`   | Figure 1, overview of privileged and reference-free on-policy self-distillation and the diagnostic profiles. [Caption in arXiv v2](https://arxiv.org/html/2609.20612v2#S1.F1); [original PNG](https://arxiv.org/html/2609.20612v2/figure1_concept.png). Downloaded unchanged under the paper's CC BY 4.0 license. |
 | LMSM                        | `lmsm-figure1.svg`            | Figure 1, comparison of separate guards with the shared LMSM enforcement substrate. [Caption in arXiv v1](https://arxiv.org/html/2608.25697v1#S1.F1); [original source archive](https://arxiv.org/src/2608.25697v1), `figures/sections/LMSM_overview.pdf`.                                                                                  |
 | SEE                         | `see.png`                     | Figure 1, overview of the SEE cycle. [Caption in arXiv v2](https://arxiv.org/html/2606.05122v2#S2.F1); [original PNG](https://arxiv.org/html/2606.05122v2/method.png). The existing local PNG is byte-identical to this source.                                                                                                             |
 | Cosine Misleads             | `cosine_misleads-figure1.svg` | Figure 1, the relationship between cosine alignment and accuracy across five variants. [Caption in arXiv v1](https://arxiv.org/html/2606.05753v1#S1.F1); [original SVG](https://arxiv.org/html/2606.05753v1/fig1_teaser.svg).                                                                                                               |
